@@ -1,0 +1,19 @@
+
+<br/>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a *ngIf="loginService.isUserLoggedIn()" class="navbar-brand" href="#">Providers CRUD</a>
+  <div *ngIf="loginService.isUserLoggedIn()" class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link" routerLink="/listProvider" routerLinkActive="active">Liste</a>
+      <a class="nav-item nav-link" routerLink="/addProvider" routerLinkActive="active">Ajouter</a>
+    </div>
+  </div>
+
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link" routerLink="/logout" *ngIf="loginService.isUserLoggedIn()" routerLinkActive="active">LogOut</a>
+    </div>
+  </div>
+  </nav>
+  <router-outlet></router-outlet>
+

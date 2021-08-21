@@ -1,0 +1,28 @@
+<h1 align="center">Ajout d'un nouveau Provider</h1>
+
+<form #myform="ngForm" (ngSubmit)="createUser(myform)">
+  <div class="form-group">
+    <label for="providerName">Name </label>
+    <input ngModel name="name" size="20" type="text" class="form-control"  />
+  </div>
+
+  <div class="form-group">
+    <label for="providerName">Username(email) </label>
+    <input ngModel name="username" size="20" type="text" class="form-control"  />
+  </div>
+  <div class="form-group">
+    <label for="providerEmail">Password </label>
+    <input ngModel name="password" size="20" type="text" class="form-control"  />
+  </div>
+  <div class="form-group">
+    <label for="providerAdress">Role </label>
+    <select ngModel name="role"  class="form-control"  >
+      <option value="">Choir votre role</option>
+      <option value="ADMIN">ADMIN</option>
+      <option value="MANAGER">MANAGER</option>
+      <option value="USER">USER</option>
+    </select>
+  </div>
+  <button class="btn btn-primary">Ajouter</button>
+</form>
+

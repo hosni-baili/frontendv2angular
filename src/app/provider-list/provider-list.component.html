@@ -1,0 +1,36 @@
+<h2 align="center">Liste des providers</h2>
+<table class="table" border="2">
+  <tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Adress</th>
+    <th>Suppression</th>
+    <th>Modification</th>
+  </tr>
+  <tr *ngFor="let provider of providers">
+    <td>{{provider.id}}</td>
+    <td>{{provider.name}}</td>
+    <td>{{provider.address}}</td>
+    <td>{{provider.email}}</td>
+    <td><button (click)="deleteProvider(provider)" class="btn btn-danger">Supprimer</button></td>
+    <td><button (click)="updateProvider(provider)" class="btn btn-warning">Modifier</button></td>
+  </tr>
+</table>
+
+<!--h2 align="center">Liste des Providers</h2>
+<ul>
+  <li *ngFor="let p of mesproviders">{{#p}}</li>
+</ul>
+
+<h3 align="center">Liste des users</h3>
+<table class="table" align="center" border="1">
+  <tr><th>Id</th><th>First Name</th><th>Last Name</th><th>Email</th><th>Profil</th></tr>
+  <tr *ngFor="let u of users">
+    <td>{{#u.#id}}</td>
+    <td>{{#u.#first_name}}</td>
+    <td>{{#u.#last_name}}</td>
+    <td>{{#u.#email}}</td>
+    <td><img src={{#u.#avatar}}/></td>
+  </tr>
+</table-->
